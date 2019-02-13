@@ -4,4 +4,10 @@
 # Examples:
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+#   Character.create(name: 'Luke', movie: movies.first) |
+
+puts "Creating 5 random restaurants w/ faker gem"
+5.times do
+  Restaurant.create(name: Faker::Name.name, address: Faker::Address.street_address, phone_number: Faker::PhoneNumber.cell_phone, category: ['chinese', 'italian', 'japanese', 'french', 'belgian'].sample)
+end
+puts "Done!"
