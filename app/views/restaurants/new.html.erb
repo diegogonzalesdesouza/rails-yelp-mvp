@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>New Restaurant</h1>
+  <%= simple_form_for(@restaurant) do |f| %>
+    <%= f.input :name, placeholder: 'Name' %>
+    <%= f.input :address, placeholder: 'Rua Mourato Coelho, 1014 - Vila Madalena' %>
+    <%= f.input :phone_number, placeholder: '(11) 97766 5544' %>
+    <%= f.input :category, collection: ['chinese', 'italian', 'japanese', 'french', 'belgian'], placeholder: '(11) 97766 5544' %>
+    <%= f.submit class: 'btn btn-success' %>
+    <%= link_to "Home", restaurants_path, class: "btn btn-secondary" %>
+  <% end %>
+</div>

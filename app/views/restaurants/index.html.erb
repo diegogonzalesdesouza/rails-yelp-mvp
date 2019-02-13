@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Restaurants</h1>
+  <%= link_to "New restaurant", new_restaurant_path, class: "btn btn-success" %>
+  <% @restaurants.each do |restaurant| %>
+    <div class="card rounded shadow-sm">
+      <%= link_to restaurant_path(restaurant) do %>
+        <div class="content-container">
+          <h4><%= restaurant.name %></h4>
+          <small><%= restaurant.address %></small>
+          <!-- <h3><%= restaurant.name %></h3> -->
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>
